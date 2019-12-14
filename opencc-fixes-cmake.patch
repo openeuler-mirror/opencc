@@ -1,0 +1,26 @@
+Index: OpenCC-ver.1.0.5/CMakeLists.txt
+===================================================================
+--- OpenCC-ver.1.0.5.orig/CMakeLists.txt
++++ OpenCC-ver.1.0.5/CMakeLists.txt
+@@ -68,7 +68,7 @@ set (DIR_PREFIX ${CMAKE_INSTALL_PREFIX})
+ set (DIR_INCLUDE ${DIR_PREFIX}/include/)
+ set (DIR_SHARE ${DIR_PREFIX}/share/)
+ set (DIR_ETC ${DIR_PREFIX}/etc/)
+-set (DIR_LIBRARY ${DIR_PREFIX}/lib${LIB_SUFFIX}/)
++set (DIR_LIBRARY ${LIB_INSTALL_DIR})
+ 
+ if (DEFINED SHARE_INSTALL_PREFIX)
+   set (DIR_SHARE ${SHARE_INSTALL_PREFIX})
+Index: OpenCC-ver.1.0.5/data/CMakeLists.txt
+===================================================================
+--- OpenCC-ver.1.0.5.orig/data/CMakeLists.txt
++++ OpenCC-ver.1.0.5/data/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ set(OPENCC_DICT_BIN opencc_dict)
+-set(DICT_MERGE_BIN python ${CMAKE_CURRENT_SOURCE_DIR}/scripts/merge.py)
+-set(DICT_REVERSE_BIN python ${CMAKE_CURRENT_SOURCE_DIR}/scripts/reverse.py)
++set(DICT_MERGE_BIN python3 ${CMAKE_CURRENT_SOURCE_DIR}/scripts/merge.py)
++set(DICT_REVERSE_BIN python3 ${CMAKE_CURRENT_SOURCE_DIR}/scripts/reverse.py)
+ set(DICT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dictionary)
+ set(DICT_GENERATED_DIR ${CMAKE_CURRENT_BINARY_DIR})
+ 
