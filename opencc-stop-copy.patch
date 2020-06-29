@@ -1,0 +1,23 @@
+From 6a1e149b643d07b465b348e23a696f8df800cdc4 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] opencc stop copy
+
+---
+ data/CMakeLists.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/data/CMakeLists.txt b/data/CMakeLists.txt
+index 3989bad..c9b20c1 100644
+--- a/data/CMakeLists.txt
++++ b/data/CMakeLists.txt
+@@ -109,8 +109,6 @@ foreach(DICT ${DICTS})
+       ${DICT}.ocd
+     COMMENT
+       "Building ${DICT}.ocd"
+-    COMMAND
+-      ${CMAKE_COMMAND} -E copy "$<TARGET_FILE:libopencc>" "$<TARGET_FILE_DIR:${OPENCC_DICT_BIN}>"
+     COMMAND
+       ${OPENCC_DICT_BIN}
+         --input ${DICT_${DICT}_INPUT}
+-- 
+2.23.0
+
