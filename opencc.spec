@@ -1,14 +1,10 @@
 Name:           opencc
-Version:        1.0.5
-Release:        6
+Version:        1.1.3
+Release:        1
 Summary:        Simplified Chinese Traditional Conversion Library
 License:        ASL 2.0
 URL:            https://github.com/BYVoid/OpenCC
 Source0:        https://github.com/BYVoid/OpenCC/archive/ver.%{version}.tar.gz#/OpenCC-ver.%{version}.tar.gz
-Patch0001:      opencc-fixes-cmake.patch
-Patch0002:      opencc-check-bounds.patch
-Patch0003:      opencc-stop-copy.patch
-Patch0004:      modify-some-trans-error.patch
 
 Provides:       %{name}-tools = %{version}-%{release}
 Obsoletes:      %{name}-tools < %{version}-%{release}
@@ -69,6 +65,9 @@ ctest
 %{_datadir}/opencc/doc
 
 %changelog
+* Thu Dec 30 2021 houyingchao <houyingchao@huawei.com> - 1.1.3-1
+- Upgrade to 1.1.3 version
+
 * Sat Aug 28 2021 sunguoshuai <sunguoshuai@huawei.com> - 1.0.5-6
 - Modify some trans error
 
